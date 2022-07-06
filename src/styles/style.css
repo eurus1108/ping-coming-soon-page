@@ -1,0 +1,29 @@
+:root {
+  --font-family-default: "Libre Franklin", sans-serif;
+  --font-weight-light: 300;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-size-100: 1rem;
+  --font-size-200: 1.2rem;
+  --font-size-300: 1.6rem;
+  --font-size-400: 2rem;
+  --font-size-500: 2.2rem;
+  --font-size-600: 4.6rem;
+  --colorBlue100: hsl(223, 100%, 88%);
+  --colorBlue200: hsl(223, 87%, 63%);
+  --colorBlue300: hsl(209, 33%, 12%);
+  --colorRed100: hsl(354, 100%, 66%);
+  --colorGray100: hsl(0, 0%, 100%);
+  --colorGray200: hsl(217, 27%, 85%);
+  --colorGray300: hsl(0, 0%, 59%);
+  --colorTransparentBlue100: rgba(194, 211, 255);
+  --color-text-default: var(--colorBlue300);
+  --color-text-subtle: var(--colorGray300);
+  --color-text-weak: var(--colorBlue100);
+  --color-text-error: var(--colorRed100);
+  --color-background-default: var(--colorGray100);
+  --color-background-button: var(--colorBlue300);
+  --color-border-default: var(--colorBlue100);
+  --color-border-error: var(--colorRed100);
+  --color-border-elevation-accent: var(--colorBlue300);
+}
