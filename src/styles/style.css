@@ -21,9 +21,210 @@
   --color-text-subtle: var(--colorGray300);
   --color-text-weak: var(--colorBlue100);
   --color-text-error: var(--colorRed100);
+  --color-text-visualization-primary: var(--colorBlue200);
   --color-background-default: var(--colorGray100);
-  --color-background-button: var(--colorBlue300);
+  --color-background-button: var(--colorBlue200);
+  --color-background-hovered: var(--colorBlue200);
+  --color-fill-default: var(--colorBlue200);
+  --color-fill-hovered: var(--colorGray100);
+  --color-hovered-default: var(--colorTransparentBlue100);
   --color-border-default: var(--colorBlue100);
   --color-border-error: var(--colorRed100);
-  --color-border-elevation-accent: var(--colorBlue300);
+  --color-border-elevation-accent: var(--colorBlue200);
+  --color-boxshadow-default: var(--colorTransparentBlue100);
+}
+
+html {
+  font-size: 62.5%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family-default);
+  font-size: var(--font-size-300);
+  font-weight: var(--font-weight-light);
+  color: var(--color-text-default);
+  background-color: var(--color-background-default);
+}
+
+.h-wrapper {
+  position: relative;
+  max-width: 64.1rem;
+  width: 100%;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  padding: 8.1rem 0 4rem;
+}
+
+.header__logo {
+  width: 5.4rem;
+}
+
+.header__logo img,
+.hero__img-container img {
+  width: 100%;
+  vertical-align: middle;
+}
+
+.hero {
+  margin-bottom: 12rem;
+}
+
+.hero__img-container {
+  margin: 0 auto;
+  max-width: 32rem;
+  width: 100%;
+}
+
+.hero__content-container {
+  margin-bottom: 6.8rem;
+}
+
+.hero__text-content {
+  margin-bottom: 3.2rem;
+  text-align: center;
+}
+
+.hero__text-content .headline {
+  margin-bottom: 1.8rem;
+  font-size: var(--font-size-500);
+  letter-spacing: 0.005em;
+}
+
+.hero__text-content .headline .headline--light {
+  font-weight: var(--font-weight-light);
+  color: var(--color-text-subtle);
+}
+
+.hero__text-content .body {
+  font-size: var(--font-size-200);
+  letter-spacing: 0.002em;
+}
+
+.hero__form-container {
+  margin: 0 auto;
+  max-width: 28.2rem;
+  width: 100%;
+}
+
+.form__group {
+  margin-bottom: 1rem;
+  transition: 300ms ease;
+}
+
+.form__group.invalid {
+  margin-bottom: 2.4rem;
+}
+
+.form__control,
+.form__button {
+  width: 100%;
+  font-family: inherit;
+  font-size: var(--font-size-200);
+  border-radius: 99rem;
+  outline: none;
+}
+
+.form__control {
+  padding: 1.1rem 3.2rem 1.2rem;
+  letter-spacing: 0.01em;
+  color: var(--color-text-default);
+  border: 1px solid var(--color-border-default);
+}
+
+::placeholder {
+  letter-spacing: -0.005em;
+  color: var(--color-text-weak);
+  opacity: 1;
+}
+
+.form__button {
+  position: relative;
+  padding: 1.2rem 3.2rem 1.3rem;
+  font-weight: var(--font-weight-semibold);
+  color: var(--colorGray100);
+  background-color: var(--color-background-button);
+  border: none;
+  cursor: pointer;
+}
+
+.form__button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 100%;
+  background-color: var(--color-hovered-default);
+  border-radius: 99rem;
+  opacity: 0;
+  transition: opacity 300ms ease;
+}
+
+.form__button:hover::after {
+  opacity: 0.3;
+}
+
+.footer {
+  text-align: center;
+}
+
+.footer__social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2.7rem;
+}
+
+.footer__social a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.1rem;
+  height: 3.1rem;
+  border: 1px solid var(--color-border-default);
+  border-radius: 99rem;
+  transition: background-color 300ms ease, border 300ms ease;
+}
+
+.footer__social a:not(:last-child) {
+  margin-right: 1.3rem;
+}
+
+.footer__social a:hover {
+  background-color: var(--color-background-hovered);
+  border: 1px solid var(--color-border-elevation-accent);
+}
+
+.footer__social a svg path {
+  fill: var(--color-fill-default);
+  transition: fill 300ms ease;
+}
+
+.footer__social a:hover svg path {
+  fill: var(--color-fill-hovered);
+}
+
+.footer__copyright {
+  padding-bottom: 3.7rem;
+}
+
+.footer__copyright .copyright-text {
+  font-size: var(--font-size-100);
+  font-weight: var(--font-weight-light);
+  letter-spacing: 0.002em;
+  color: var(--color-text-subtle);
 }
